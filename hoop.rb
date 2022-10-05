@@ -10,7 +10,7 @@ class Hoop < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://hoopartifacts.s3.amazonaws.com/release/0.0.3/hoop_0.0.3_Darwin_arm64.tar.gz"
-      sha256 "903167582998fab837be0e5e08033cb7c582279ee068f62ff1977042ffbab672"
+      sha256 "c00af58712c591497dc4b013256c781500f7243b71a12c776982a633483486a2"
 
       def install
         bin.install "hoop"
@@ -18,7 +18,7 @@ class Hoop < Formula
     end
     if Hardware::CPU.intel?
       url "https://hoopartifacts.s3.amazonaws.com/release/0.0.3/hoop_0.0.3_Darwin_x86_64.tar.gz"
-      sha256 "ca9132a5f259d4f3d9fa204eb7f420e9c0508a75c0aed7fac7ef223fe16c675e"
+      sha256 "73e3ad0caab0decabeb0cba70be9f7bf96f1f43e95fade8536ec454f599027ab"
 
       def install
         bin.install "hoop"
@@ -29,7 +29,7 @@ class Hoop < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://hoopartifacts.s3.amazonaws.com/release/0.0.3/hoop_0.0.3_Linux_x86_64.tar.gz"
-      sha256 "1476608951246b0ea8ba9e49cd8537a5e6f8fd832dcfad64285bae445e6cd9a8"
+      sha256 "4525015c23146d7fbd248d8cd74be1d46df93d14381c92fd210b18b02cedbb95"
 
       def install
         bin.install "hoop"
@@ -37,7 +37,7 @@ class Hoop < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://hoopartifacts.s3.amazonaws.com/release/0.0.3/hoop_0.0.3_Linux_arm64.tar.gz"
-      sha256 "5ad8d224c5a6f71a3b6fcb61563c3351aac214b59774c0a82ed5dbc8321781d6"
+      sha256 "1307255d87c1269f0aee5f4bc94c1898a6ab77352067aaede34033bccdd7a554"
 
       def install
         bin.install "hoop"
