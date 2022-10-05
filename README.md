@@ -12,7 +12,5 @@ Hoop allows acessing any infra-structure resource easily and secure.
 ```sh
 brew tap hoophq/hoopcli https://github.com/hoophq/hoopcli
 brew install hoop
-hoop --version
+hoop start
 ```
-
-For more information check out [this documentation](https://blog.runops.io/docs/runopsproxy/).
