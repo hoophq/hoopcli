@@ -5,20 +5,20 @@
 class Hoop < Formula
   desc "Hoop allows acessing any infra-structure resource easily and secure."
   homepage "https://github.com/hoophq/hoopcli"
-  version "0.0.62"
+  version "0.0.63"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://hoopartifacts.s3.amazonaws.com/release/0.0.62/hoop_0.0.62_Darwin_x86_64.tar.gz"
-      sha256 "3b939c3c5c6cc969930981985fc6569571c1c23ae2e0d6f43d514bf5cb7e659e"
+    if Hardware::CPU.arm?
+      url "https://hoopartifacts.s3.amazonaws.com/release/0.0.63/hoop_0.0.63_Darwin_arm64.tar.gz"
+      sha256 "10ebe38fb6aad3103e7911cccdc329feed8e5089daa1277dac37dedb0ea4a794"
 
       def install
         bin.install "hoop"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://hoopartifacts.s3.amazonaws.com/release/0.0.62/hoop_0.0.62_Darwin_arm64.tar.gz"
-      sha256 "298efb04e2eb3b2e4344d948b1ef091a9829fe09eab520486259d5a963b78893"
+    if Hardware::CPU.intel?
+      url "https://hoopartifacts.s3.amazonaws.com/release/0.0.63/hoop_0.0.63_Darwin_x86_64.tar.gz"
+      sha256 "13d030cd2ae44aa75eab1f3de5960acf7c0e2c6a203697901177222a11506637"
 
       def install
         bin.install "hoop"
@@ -27,17 +27,17 @@ class Hoop < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://hoopartifacts.s3.amazonaws.com/release/0.0.62/hoop_0.0.62_Linux_arm64.tar.gz"
-      sha256 "077565ed1660a6789e8798605fd3e2ffc05f1f6c17a7ab650d3a1226202c49ae"
+    if Hardware::CPU.intel?
+      url "https://hoopartifacts.s3.amazonaws.com/release/0.0.63/hoop_0.0.63_Linux_x86_64.tar.gz"
+      sha256 "f868c0526cac1657f1e4221be1f6b30a7c3a914704765b70a98225ac6b57353f"
 
       def install
         bin.install "hoop"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://hoopartifacts.s3.amazonaws.com/release/0.0.62/hoop_0.0.62_Linux_x86_64.tar.gz"
-      sha256 "b094c818f977776b42b14e1dbf0efb12e377cf2218966d575e788bb08d99f20a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://hoopartifacts.s3.amazonaws.com/release/0.0.63/hoop_0.0.63_Linux_arm64.tar.gz"
+      sha256 "5b85a88ccc07273d4b1b662fa448a206083ac7eea9201b8daf75d0aa74843169"
 
       def install
         bin.install "hoop"
