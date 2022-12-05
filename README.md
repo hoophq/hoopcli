@@ -1,7 +1,7 @@
 # Hoop
 
-- Website: https://runops.io/
-- Documentation: https://runops.io/docs
+- Website: https://hoop.dev
+- Documentation: https://hoop.dev/docs
 
 Hoop allows acessing any infra-structure resource easily and secure.
 
