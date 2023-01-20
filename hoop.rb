@@ -5,20 +5,20 @@
 class Hoop < Formula
   desc "Hoop allows acessing any infra-structure resource easily and secure."
   homepage "https://github.com/hoophq/hoopcli"
-  version "1.0.35"
+  version "1.0.36"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://hoopartifacts.s3.amazonaws.com/release/1.0.35/hoop_1.0.35_Darwin_x86_64.tar.gz"
-      sha256 "b88675838bd1f9e1dab0ca1a0cb3f99423b496479ff9a16075e06b780c2bcc50"
+      url "https://hoopartifacts.s3.amazonaws.com/release/1.0.36/hoop_1.0.36_Darwin_x86_64.tar.gz"
+      sha256 "bd3fc12cfc0aeff6fea02e9cbc9d913db66c5cbdb2fa854fe604644a5241cb23"
 
       def install
         bin.install "hoop"
       end
     end
     if Hardware::CPU.arm?
-      url "https://hoopartifacts.s3.amazonaws.com/release/1.0.35/hoop_1.0.35_Darwin_arm64.tar.gz"
-      sha256 "0d72e14d8a1097411afc133f4d905b05111db3d9c35685c16eb9198cef168269"
+      url "https://hoopartifacts.s3.amazonaws.com/release/1.0.36/hoop_1.0.36_Darwin_arm64.tar.gz"
+      sha256 "b7cc291642ecbf317b086c8279564b65069b44e836ceebeeaefe045d89c0c801"
 
       def install
         bin.install "hoop"
@@ -28,16 +28,16 @@ class Hoop < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://hoopartifacts.s3.amazonaws.com/release/1.0.35/hoop_1.0.35_Linux_arm64.tar.gz"
-      sha256 "a51c49fa908ce857a8b8fcbf1161f34efafdf1c196895bfe9bde3020fb335f3b"
+      url "https://hoopartifacts.s3.amazonaws.com/release/1.0.36/hoop_1.0.36_Linux_arm64.tar.gz"
+      sha256 "eea0db32f1923651dbe066a6b0bd8920e8cd8c941531c91ad9651896822b9c24"
 
       def install
         bin.install "hoop"
       end
     end
     if Hardware::CPU.intel?
-      url "https://hoopartifacts.s3.amazonaws.com/release/1.0.35/hoop_1.0.35_Linux_x86_64.tar.gz"
-      sha256 "ecc753a6be118da207d0f8ce1dbe67eb08f0b29cc3018253231c44e2edcf0cb9"
+      url "https://hoopartifacts.s3.amazonaws.com/release/1.0.36/hoop_1.0.36_Linux_x86_64.tar.gz"
+      sha256 "5a916be94a0bf47ac0e9a2b7cd01e5ae612ecb17219be8b173e8503314f55e1c"
 
       def install
         bin.install "hoop"
