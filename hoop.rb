@@ -5,20 +5,20 @@
 class Hoop < Formula
   desc "Hoop allows acessing any infra-structure resource easily and secure."
   homepage "https://github.com/hoophq/hoopcli"
-  version "1.2.5"
+  version "1.2.6"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://hoopartifacts.s3.amazonaws.com/release/1.2.5/hoop_1.2.5_Darwin_arm64.tar.gz"
-      sha256 "f440ef3de34e1fdcaf921b04b67abe6e6224b8cb9e4393ce2afe9e17cfdba69c"
+      url "https://hoopartifacts.s3.amazonaws.com/release/1.2.6/hoop_1.2.6_Darwin_arm64.tar.gz"
+      sha256 "854d4e231ddf018e9c174973dd411650a67b7807150793cd50a562d293afa125"
 
       def install
         bin.install "hoop"
       end
     end
     if Hardware::CPU.intel?
-      url "https://hoopartifacts.s3.amazonaws.com/release/1.2.5/hoop_1.2.5_Darwin_x86_64.tar.gz"
-      sha256 "b50e9cb91174e11ad361e0a106ef1beedf195ed26051452c5bcfb74992eb247a"
+      url "https://hoopartifacts.s3.amazonaws.com/release/1.2.6/hoop_1.2.6_Darwin_x86_64.tar.gz"
+      sha256 "62af3caef959ee8b94940145745bb84ede9131fd62d57f0ac7c23d2b08d01b67"
 
       def install
         bin.install "hoop"
@@ -27,17 +27,17 @@ class Hoop < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://hoopartifacts.s3.amazonaws.com/release/1.2.5/hoop_1.2.5_Linux_arm64.tar.gz"
-      sha256 "17bf1f93c7c3e0a43e821ec856ede5a09724180524ad6cf3a889487941aac00d"
+    if Hardware::CPU.intel?
+      url "https://hoopartifacts.s3.amazonaws.com/release/1.2.6/hoop_1.2.6_Linux_x86_64.tar.gz"
+      sha256 "942d4e094eb8070f5e41419fd80a4b718023844e3bcd01effd845d3182b9cbeb"
 
       def install
         bin.install "hoop"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://hoopartifacts.s3.amazonaws.com/release/1.2.5/hoop_1.2.5_Linux_x86_64.tar.gz"
-      sha256 "7b75c7e7693ddafebff6b3eb42e7585a15e39acfc4dc642b4f86ccdd63d08db9"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://hoopartifacts.s3.amazonaws.com/release/1.2.6/hoop_1.2.6_Linux_arm64.tar.gz"
+      sha256 "fe859e8362d81b233d73201f98e0b36d21559445c076639b306d9c94b79f2540"
 
       def install
         bin.install "hoop"
