@@ -5,20 +5,20 @@
 class Hoop < Formula
   desc "Hoop allows acessing any infra-structure resource easily and secure."
   homepage "https://github.com/hoophq/hoopcli"
-  version "1.8.1"
+  version "1.8.3"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://hoopartifacts.s3.amazonaws.com/release/1.8.1/hoop_1.8.1_Darwin_arm64.tar.gz"
-      sha256 "c571b9f783ec784b0775e35bd9d69b3f227d9cd3c445cec74e1a62a520c84c47"
+    if Hardware::CPU.intel?
+      url "https://hoopartifacts.s3.amazonaws.com/release/1.8.3/hoop_1.8.3_Darwin_x86_64.tar.gz"
+      sha256 "3df025e376dcc6e53f26352ff1f358b14558ef57fdae618e6fad604e30c0dfcc"
 
       def install
         bin.install "hoop"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://hoopartifacts.s3.amazonaws.com/release/1.8.1/hoop_1.8.1_Darwin_x86_64.tar.gz"
-      sha256 "b7d46e0eb55e4d30898d75df66bcf56697c7b409a992c4b31e6ce0734aa97b4e"
+    if Hardware::CPU.arm?
+      url "https://hoopartifacts.s3.amazonaws.com/release/1.8.3/hoop_1.8.3_Darwin_arm64.tar.gz"
+      sha256 "b51d44dea22cb25757bbe3d480a7da801a175784c6ee50f5d36fed78c62154a2"
 
       def install
         bin.install "hoop"
@@ -27,17 +27,17 @@ class Hoop < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://hoopartifacts.s3.amazonaws.com/release/1.8.1/hoop_1.8.1_Linux_x86_64.tar.gz"
-      sha256 "8630d434e8c344d6369c11cbe8386e33119c0a783c4b9df03c89d062de259a3f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://hoopartifacts.s3.amazonaws.com/release/1.8.3/hoop_1.8.3_Linux_arm64.tar.gz"
+      sha256 "f0224a6ac88554c5716dfd3dcc91c3d872c9ba7585eab3bdfa5a062165b1679b"
 
       def install
         bin.install "hoop"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://hoopartifacts.s3.amazonaws.com/release/1.8.1/hoop_1.8.1_Linux_arm64.tar.gz"
-      sha256 "fcad33748ad6d271a20a3dabb6b36f863843230cd2092ecd8dfaf53245f7b0c3"
+    if Hardware::CPU.intel?
+      url "https://hoopartifacts.s3.amazonaws.com/release/1.8.3/hoop_1.8.3_Linux_x86_64.tar.gz"
+      sha256 "87b37b3ca42aaf292259d3631e0382c395c709bd7ce4432d5b720c0f429638f2"
 
       def install
         bin.install "hoop"
