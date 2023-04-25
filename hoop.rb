@@ -5,20 +5,20 @@
 class Hoop < Formula
   desc "Hoop allows acessing any infra-structure resource easily and secure."
   homepage "https://github.com/hoophq/hoopcli"
-  version "1.8.9"
+  version "1.8.10"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://hoopartifacts.s3.amazonaws.com/release/1.8.9/hoop_1.8.9_Darwin_x86_64.tar.gz"
-      sha256 "fe91bdccb6cd1c1cd903ab0bd78bc74e273679f4f5a1d1c9b9c5a12e056dbb2a"
+    if Hardware::CPU.arm?
+      url "https://hoopartifacts.s3.amazonaws.com/release/1.8.10/hoop_1.8.10_Darwin_arm64.tar.gz"
+      sha256 "9b52961e38174d536a223bf2a18a10e5e8d22863a9194f18d1a1259fedcb89aa"
 
       def install
         bin.install "hoop"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://hoopartifacts.s3.amazonaws.com/release/1.8.9/hoop_1.8.9_Darwin_arm64.tar.gz"
-      sha256 "99340aea853cdc85caf92cc3b2dc845880486773fb71632456c2e15241dee6d6"
+    if Hardware::CPU.intel?
+      url "https://hoopartifacts.s3.amazonaws.com/release/1.8.10/hoop_1.8.10_Darwin_x86_64.tar.gz"
+      sha256 "06c4127570f4b3f52cdb01c52586c5f91cf39538b2579fba2327c45d29cb4b28"
 
       def install
         bin.install "hoop"
@@ -27,17 +27,17 @@ class Hoop < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://hoopartifacts.s3.amazonaws.com/release/1.8.9/hoop_1.8.9_Linux_arm64.tar.gz"
-      sha256 "51e73e358bd9c53d390b63521eb01288195f59032c237becf23ee8c48de1862c"
+    if Hardware::CPU.intel?
+      url "https://hoopartifacts.s3.amazonaws.com/release/1.8.10/hoop_1.8.10_Linux_x86_64.tar.gz"
+      sha256 "13ed13b0a1d0d43f5208bac7a4ab9677717eb43cdfc63d054f0ba86a368b5207"
 
       def install
         bin.install "hoop"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://hoopartifacts.s3.amazonaws.com/release/1.8.9/hoop_1.8.9_Linux_x86_64.tar.gz"
-      sha256 "60e19e6e88fb3ff2e96db47b714a3ce44d85554115ab386e7b866923330f2851"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://hoopartifacts.s3.amazonaws.com/release/1.8.10/hoop_1.8.10_Linux_arm64.tar.gz"
+      sha256 "e02acefbc5615af136096608c31c036c39760b83151e8745b2d0b1e827d0f474"
 
       def install
         bin.install "hoop"
