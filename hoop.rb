@@ -5,20 +5,20 @@
 class Hoop < Formula
   desc "Hoop allows acessing any infra-structure resource easily and secure."
   homepage "https://github.com/hoophq/hoopcli"
-  version "1.12.19"
+  version "1.12.20"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://hoopartifacts.s3.amazonaws.com/release/1.12.19/hoop_1.12.19_Darwin_x86_64.tar.gz"
-      sha256 "f67554d57fa29fe9e4c09285a011c018e34bd5b6dd6e541a0647d7af473302f8"
+      url "https://hoopartifacts.s3.amazonaws.com/release/1.12.20/hoop_1.12.20_Darwin_x86_64.tar.gz"
+      sha256 "47c599706d1b8df6812d9a5472361953093b74ad0b4c32971626ac48c75ec078"
 
       def install
         bin.install "hoop"
       end
     end
     if Hardware::CPU.arm?
-      url "https://hoopartifacts.s3.amazonaws.com/release/1.12.19/hoop_1.12.19_Darwin_arm64.tar.gz"
-      sha256 "ba98ebad189386f84b821853c79e96cde4215b9884e3c4437966321b8f312d6b"
+      url "https://hoopartifacts.s3.amazonaws.com/release/1.12.20/hoop_1.12.20_Darwin_arm64.tar.gz"
+      sha256 "9a8b71a6fb1a27cda898340e988f80837e87b61c1279aab77b14924d50024d91"
 
       def install
         bin.install "hoop"
@@ -27,17 +27,17 @@ class Hoop < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://hoopartifacts.s3.amazonaws.com/release/1.12.19/hoop_1.12.19_Linux_x86_64.tar.gz"
-      sha256 "cc2b75f508abe66c19596adef2907999588a3d6f69da0eca3abe5e67730d183b"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://hoopartifacts.s3.amazonaws.com/release/1.12.20/hoop_1.12.20_Linux_arm64.tar.gz"
+      sha256 "025ab613c6d475b6641ee0ee913ced93d912a853bb1ef4594dd253746e1be59e"
 
       def install
         bin.install "hoop"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://hoopartifacts.s3.amazonaws.com/release/1.12.19/hoop_1.12.19_Linux_arm64.tar.gz"
-      sha256 "e2467228bd34099481791d273a52ae731dc1ab9908aa796e5c53b6c53e2b53ae"
+    if Hardware::CPU.intel?
+      url "https://hoopartifacts.s3.amazonaws.com/release/1.12.20/hoop_1.12.20_Linux_x86_64.tar.gz"
+      sha256 "0664ceab4b7ff66a1fdb80ad5430cab583f8495c4f34002ea8a1247db9e0fe26"
 
       def install
         bin.install "hoop"
