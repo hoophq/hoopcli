@@ -1,0 +1,29 @@
+name: Public Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'The semantic version to use to generate a new release'
+        required: true
+        type: string
+
+jobs:
+  publish-release:
+    runs-on: ubuntu-latest
+    name: Publish Release
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Generate Brew Tap
+        run: ./scripts/brew-recipe.sh ${{inputs.version}}
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Release ${{inputs.version}}
+      - name: Get Changelog
+        run: curl https://releases.hoop.dev/release/${{inputs.version}}/CHANGELOG.txt > ./dist/CHANGELOG.txt
+      - name: Publish Release
+        uses: softprops/action-gh-release@v1
+        with:
+          body_path: ${{ github.workspace }}/dist/CHANGELOG.txt
+          tag_name: ${{ inputs.version }}
