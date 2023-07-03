@@ -5,20 +5,20 @@
 class Hoop < Formula
   desc "Hoop allows acessing any infra-structure resource easily and secure."
   homepage "https://github.com/hoophq/hoopcli"
-  version "1.14.10"
+  version "1.14.11-beta1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.hoop.dev/release/1.14.10/hoop_1.14.10_Darwin_amd64.tar.gz"
-      sha256 "d6c676515b196b9e8ae2ea2adff16c394efbcb9538b033b0ec4b3d9e8fbb9e6c"
+      url "https://releases.hoop.dev/release/1.14.11-beta1/hoop_1.14.11-beta1_Darwin_amd64.tar.gz"
+      sha256 "e6a92c01e10f81e1ff5dd37d58969a276c86411ee8771234c560c5796632daf1"
 
       def install
         bin.install "hoop"
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.hoop.dev/release/1.14.10/hoop_1.14.10_Darwin_arm64.tar.gz"
-      sha256 "aa4138226d9a999a24b7097bdd66b733b11b3e0219beb635f71f9bdf9eacdb55"
+      url "https://releases.hoop.dev/release/1.14.11-beta1/hoop_1.14.11-beta1_Darwin_arm64.tar.gz"
+      sha256 "586040b0b60adc64a8fae77ffd62dd7bc85ecdf7d093dc74e708b3187e5ec177"
 
       def install
         bin.install "hoop"
@@ -28,16 +28,16 @@ class Hoop < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.hoop.dev/release/1.14.10/hoop_1.14.10_Linux_arm64.tar.gz"
-      sha256 "465b8129a658c13b2d14c3a50863bce797d9a50cb3fc32e8e24120734233d663"
+      url "https://releases.hoop.dev/release/1.14.11-beta1/hoop_1.14.11-beta1_Linux_arm64.tar.gz"
+      sha256 "8822203c7e323ed67653654adc320a6a4818ff0c771c625bcf9bb77b99852eb2"
 
       def install
         bin.install "hoop"
       end
     end
     if Hardware::CPU.intel?
-      url "https://releases.hoop.dev/release/1.14.10/hoop_1.14.10_Linux_amd64.tar.gz"
-      sha256 "5e6edceacb09e46c2d0096343a942a3f352258ba2448d2c38a2be285619c58ea"
+      url "https://releases.hoop.dev/release/1.14.11-beta1/hoop_1.14.11-beta1_Linux_amd64.tar.gz"
+      sha256 "4590c1f4bb2762916b4c27dce94934f7044570ca4c5a2cb08b90d569477b6116"
 
       def install
         bin.install "hoop"
