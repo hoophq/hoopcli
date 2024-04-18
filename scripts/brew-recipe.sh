@@ -44,7 +44,7 @@ class Hoop < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://releases.hoop.dev/release/$VERSION/hoop_${VERSION}_Linux_arm64.tar.gz"
-      sha256 "$LINUX_AMD64_CHECKSUM"
+      sha256 "$LINUX_ARM64_CHECKSUM"
 
       def install
         bin.install "hoop"
@@ -52,7 +52,7 @@ class Hoop < Formula
     end
     if Hardware::CPU.intel?
       url "https://releases.hoop.dev/release/$VERSION/hoop_${VERSION}_Linux_amd64.tar.gz"
-      sha256 "$LINUX_ARM64_CHECKSUM"
+      sha256 "$LINUX_AMD64_CHECKSUM"
 
       def install
         bin.install "hoop"
