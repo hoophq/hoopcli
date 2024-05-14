@@ -10,7 +10,7 @@ class Hoop < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://releases.hoop.dev/release/1.21.24/hoop_1.21.24_Darwin_amd64.tar.gz"
-      sha256 "d78734ae4b9ac086d99740dbfcb98a8d0f59a3b2738dac87788737c3e46b7167"
+      sha256 "0a5317de0c043993cdaa58caaab592fd3e614cd07e63c20749e2f2e11d4edf33"
 
       def install
         bin.install "hoop"
@@ -18,7 +18,7 @@ class Hoop < Formula
     end
     if Hardware::CPU.arm?
       url "https://releases.hoop.dev/release/1.21.24/hoop_1.21.24_Darwin_arm64.tar.gz"
-      sha256 "3110c4dc2802ce667b01ae8b83ed480a48551e677862bff758f972bc5f7e0035"
+      sha256 "ad8e7a2e9cf1b16e8e11945a56fca003349a339dcbcde92d2a30cf06d0b34a76"
 
       def install
         bin.install "hoop"
@@ -29,7 +29,7 @@ class Hoop < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://releases.hoop.dev/release/1.21.24/hoop_1.21.24_Linux_arm64.tar.gz"
-      sha256 "31fb1cf3add51a6cf4db71f05b792dbb2e7b688e75c532b646522c1a6f02c272"
+      sha256 "04b64cb11be8545f6842a9f68b05203fe9f7197346db49dddff2175f718ddc93"
 
       def install
         bin.install "hoop"
@@ -37,7 +37,7 @@ class Hoop < Formula
     end
     if Hardware::CPU.intel?
       url "https://releases.hoop.dev/release/1.21.24/hoop_1.21.24_Linux_amd64.tar.gz"
-      sha256 "6cb8674b416f74288230663b125153cd3a1aa25182ea7616052ddc83aca98c58"
+      sha256 "c8694a28a9cd01a8130fc6d410c3595ee6b6f6e38af2cd5ff888292c8980e1d7"
 
       def install
         bin.install "hoop"
