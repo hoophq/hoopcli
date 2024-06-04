@@ -5,20 +5,20 @@
 class Hoop < Formula
   desc "Hoop allows acessing any infra-structure resource easily and secure."
   homepage "https://github.com/hoophq/hoopcli"
-  version "1.21.49"
+  version "1.22.0-pre.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.hoop.dev/release/1.21.49/hoop_1.21.49_Darwin_amd64.tar.gz"
-      sha256 "e6241544a8117462dd6f9ed294c6d1632bfa4612e4b35c0901b95aa1b4330a64"
+      url "https://releases.hoop.dev/release/1.22.0-pre.5/hoop_1.22.0-pre.5_Darwin_amd64.tar.gz"
+      sha256 "9803589a25994b34854ad3a6a19c59c305767bd66fe35a07628d36514153069c"
 
       def install
         bin.install "hoop"
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.hoop.dev/release/1.21.49/hoop_1.21.49_Darwin_arm64.tar.gz"
-      sha256 "6fc502a998231df09e5e112c6986596c1a35558160218ae36bd5649e28cc8fa0"
+      url "https://releases.hoop.dev/release/1.22.0-pre.5/hoop_1.22.0-pre.5_Darwin_arm64.tar.gz"
+      sha256 "93a88dc2b1ce34453538c2610b406efcdc3d0886da9558443cbce0150812c724"
 
       def install
         bin.install "hoop"
@@ -28,16 +28,16 @@ class Hoop < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.hoop.dev/release/1.21.49/hoop_1.21.49_Linux_arm64.tar.gz"
-      sha256 "db2ab0101b1c1acc7812ba88909f5b635c6eea5140cec62f672e15e2b64998b5"
+      url "https://releases.hoop.dev/release/1.22.0-pre.5/hoop_1.22.0-pre.5_Linux_arm64.tar.gz"
+      sha256 "59a2f1d7ad4dd1d3c77937fc56a27df967eef4225a331fb3b85f9b933755d4ab"
 
       def install
         bin.install "hoop"
       end
     end
     if Hardware::CPU.intel?
-      url "https://releases.hoop.dev/release/1.21.49/hoop_1.21.49_Linux_amd64.tar.gz"
-      sha256 "d81c1571c74d478311f385a4a752599ef9b012304ac0666192a2bd41ca4a2c92"
+      url "https://releases.hoop.dev/release/1.22.0-pre.5/hoop_1.22.0-pre.5_Linux_amd64.tar.gz"
+      sha256 "ddd0d293de82776fd6f55aa0d598ce12addc1f13c17c4890ac03ef2660c29236"
 
       def install
         bin.install "hoop"
